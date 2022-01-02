@@ -1,3 +1,4 @@
+ZH-CN/[EN](https://github.com/TexBlock/AsepriteAllBuilder/blob/master/README-EN.md)
 # 这是干什么的？
 GitHub Actions 的自动化工作流程，为 Windows、Linux、macOS 构建 Aseprite。</br>
 通过使用 GitHub 操作，无需手动编译，也不包含恶意软件。</br>
