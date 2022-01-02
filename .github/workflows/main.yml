@@ -9,6 +9,7 @@ on:
 
 env:
   BUILD_TYPE: Release
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   
 jobs:
   check-version:
@@ -27,7 +28,6 @@ jobs:
         LATEST_TAG=$(echo "${data}" | jq -r '.tag_name')
         DOWNLOAD_URL=$(echo "${data}" | jq -r '.assets[].browser_download_url')
         VERSION_INFO=$(echo "${data}" | jq -r '.body')
-        ACTIONS_ALLOW_UNSECURE_COMMANDS=true
         
         echo "${LATEST_TAG}" > ${LATEST_TAG}.txt
         echo "::set-output name=latest_tag::${LATEST_TAG}"
